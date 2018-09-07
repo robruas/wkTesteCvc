@@ -39,8 +39,8 @@ public class Service {
 			DadosHospedagemVO dadosHospedagemVO = new DadosHospedagemVO();
 			dadosHospedagemVO.setQuantidadeAdulto(quantidadeAdulto);
 			dadosHospedagemVO.setQuantidadeCrianca(quantidadeCrianca);
-			dadosHospedagemVO.setCheckin(Constantes.convertStringeParaDate(checkin));
-			dadosHospedagemVO.setCheckout(Constantes.convertStringeParaDate(checkout));
+			dadosHospedagemVO.setCheckin(Constantes.converteStringeParaDate(checkin));
+			dadosHospedagemVO.setCheckout(Constantes.converteStringeParaDate(checkout));
 
 			final String hospedagensPorCidade = new HospedagemCidadeBusiness(cityCode)
 					.calculaHospedagemPorCidade(dadosHospedagemVO);
@@ -56,7 +56,7 @@ public class Service {
 	@Produces(MediaType.APPLICATION_JSON)
 	@Path("/hotel")
 	@GET
-	@ApiOperation(value = "Buscar Hotel Por Id da Cidade")
+	@ApiOperation(value = "Buscar Hotel Por Id")
 	@ApiResponse(code = HttpURLConnection.HTTP_NOT_FOUND, message = "Hotel não localizado")
 	@ApiResponses({ @ApiResponse(code = HttpURLConnection.HTTP_OK, message = "Hotel Localizado") })
 	public Response hospedagemIdHotel(@QueryParam("hotelCode") final long hotelCode,
@@ -68,8 +68,8 @@ public class Service {
 			DadosHospedagemVO dadosHospedagemVO = new DadosHospedagemVO();
 			dadosHospedagemVO.setQuantidadeAdulto(quantidadeAdulto);
 			dadosHospedagemVO.setQuantidadeCrianca(quantidadeCrianca);
-			dadosHospedagemVO.setCheckin(Constantes.convertStringeParaDate(checkin));
-			dadosHospedagemVO.setCheckout(Constantes.convertStringeParaDate(checkout));
+			dadosHospedagemVO.setCheckin(Constantes.converteStringeParaDate(checkin));
+			dadosHospedagemVO.setCheckout(Constantes.converteStringeParaDate(checkout));
 
 			final String hospedagensPorHotel = new HospedagemHotelBusiness(hotelCode)
 					.calculaHospedagemPorHotel(dadosHospedagemVO);

@@ -7,14 +7,14 @@ public class CvcAppBusinessException extends Exception {
 	private static final long serialVersionUID = -209806032835078973L;
 
 	/**
-	 * Construtor da classe UserAppDaoException
+	 * Construtor da classe CvcAppBusinessException
 	 */
 	public CvcAppBusinessException() {
 		super();
 	}
 
 	/**
-	 * Construtor da classe UserAppDaoException
+	 * Construtor da classe CvcAppBusinessException
 	 *
 	 * @param message
 	 */
@@ -23,7 +23,7 @@ public class CvcAppBusinessException extends Exception {
 	}
 
 	/**
-	 * Construtor da classe UserAppDaoException
+	 * Construtor da classe CvcAppBusinessException
 	 *
 	 * @param cause
 	 */
@@ -32,7 +32,7 @@ public class CvcAppBusinessException extends Exception {
 	}
 
 	/**
-	 * Construtor da classe UserAppDaoException
+	 * Construtor da classe CvcAppBusinessException
 	 *
 	 * @param message
 	 * @param cause
@@ -42,7 +42,7 @@ public class CvcAppBusinessException extends Exception {
 	}
 
 	/**
-	 * Construtor da classe UserAppDaoException
+	 * Construtor da classe CvcAppBusinessException
 	 *
 	 * @param message
 	 * @param cause

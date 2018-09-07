@@ -3,14 +3,6 @@ package br.com.cvc.exception;
 import java.io.Serializable;
 
 import javax.ws.rs.core.Response.Status;
-
-/**
- * Classe responsável por tratar a exceção das apis
- * 
- * @author CDS-Arquitetura
- * @since 15 de nov de 2016 23:51:45
- * @version 1.0
- */
 public class CvcAPIException extends Exception implements Serializable {
 
 	/**

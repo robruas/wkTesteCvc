@@ -1,0 +1,160 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (malloc) failed to allocate 1048576 bytes for AllocateHeap
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   In 32 bit mode, the process size limit was hit
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Use 64 bit Java on a 64 bit OS
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (memory/allocation.inline.hpp:61), pid=22984, tid=0x000000000000715c
+#
+# JRE version:  (8.0_181-b13) (build )
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (25.181-b13 mixed mode windows-amd64 compressed oops)
+# Failed to write core dump. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x0000000002594000):  JavaThread "Unknown thread" [_thread_in_vm, id=29020, stack(0x0000000002410000,0x0000000002510000)]
+
+Stack: [0x0000000002410000,0x0000000002510000]
+[error occurred during error reporting (printing stack bounds), id 0xc0000005]
+
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+
+Other Threads:
+
+=>0x0000000002594000 (exited) JavaThread "Unknown thread" [_thread_in_vm, id=29020, stack(0x0000000002410000,0x0000000002510000)]
+
+VM state:not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Heap:
+ PSYoungGen      total 38400K, used 665K [0x00000000d5c00000, 0x00000000d8680000, 0x0000000100000000)
+  eden space 33280K, 2% used [0x00000000d5c00000,0x00000000d5ca6670,0x00000000d7c80000)
+  from space 5120K, 0% used [0x00000000d8180000,0x00000000d8180000,0x00000000d8680000)
+  to   space 5120K, 0% used [0x00000000d7c80000,0x00000000d7c80000,0x00000000d8180000)
+ ParOldGen       total 87552K, used 0K [0x0000000081400000, 0x0000000086980000, 0x00000000d5c00000)
+  object space 87552K, 0% used [0x0000000081400000,0x0000000081400000,0x0000000086980000)
+ Metaspace       used 761K, capacity 4480K, committed 4480K, reserved 1056768K
+  class space    used 76K, capacity 384K, committed 384K, reserved 1048576K
+
+Card table byte_map: [0x0000000011a50000,0x0000000011e50000] byte_map_base: 0x0000000011646000
+
+Marking Bits: (ParMarkBitMap*) 0x000000006baa2d00
+ Begin Bits: [0x0000000012500000, 0x00000000144b0000)
+ End Bits:   [0x00000000144b0000, 0x0000000016460000)
+
+Polling page: 0x0000000000880000
+
+CodeCache: size=245760Kb used=328Kb max_used=328Kb free=245431Kb
+ bounds [0x0000000002690000, 0x0000000002900000, 0x0000000011690000]
+ total_blobs=58 nmethods=0 adapters=38
+ compilation: enabled
+
+Compilation events (0 events):
+No events
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (0 events):
+No events
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+Events (10 events):
+Event: 0.027 loading class java/lang/Short
+Event: 0.027 loading class java/lang/Short done
+Event: 0.027 loading class java/lang/Integer
+Event: 0.028 loading class java/lang/Integer done
+Event: 0.028 loading class java/lang/Long
+Event: 0.028 loading class java/lang/Long done
+Event: 0.028 loading class java/lang/NullPointerException
+Event: 0.028 loading class java/lang/NullPointerException done
+Event: 0.028 loading class java/lang/ArithmeticException
+Event: 0.028 loading class java/lang/ArithmeticException done
+
+
+Dynamic libraries:
+0x00007ff78cc00000 - 0x00007ff78cc37000 	C:\Program Files\Java\jre1.8.0_181\bin\javaw.exe
+0x00007ff9fe800000 - 0x00007ff9fe9e1000 	C:\WINDOWS\SYSTEM32\ntdll.dll
+0x00007ff9dd920000 - 0x00007ff9dd954000 	C:\Program Files\AVAST Software\Avast\x64\aswhooka.dll
+0x00007ff9fe710000 - 0x00007ff9fe7c2000 	C:\WINDOWS\System32\KERNEL32.DLL
+0x00007ff9faca0000 - 0x00007ff9faf13000 	C:\WINDOWS\System32\KERNELBASE.dll
+0x00007ff9fd7c0000 - 0x00007ff9fd861000 	C:\WINDOWS\System32\ADVAPI32.dll
+0x00007ff9fdb30000 - 0x00007ff9fdbce000 	C:\WINDOWS\System32\msvcrt.dll
+0x00007ff9fbc90000 - 0x00007ff9fbceb000 	C:\WINDOWS\System32\sechost.dll
+0x00007ff9fda00000 - 0x00007ff9fdb24000 	C:\WINDOWS\System32\RPCRT4.dll
+0x00007ff9fd870000 - 0x00007ff9fda00000 	C:\WINDOWS\System32\USER32.dll
+0x00007ff9fbc70000 - 0x00007ff9fbc90000 	C:\WINDOWS\System32\win32u.dll
+0x00007ff9fbec0000 - 0x00007ff9fbee8000 	C:\WINDOWS\System32\GDI32.dll
+0x00007ff9fb0c0000 - 0x00007ff9fb252000 	C:\WINDOWS\System32\gdi32full.dll
+0x00007ff9fb020000 - 0x00007ff9fb0bf000 	C:\WINDOWS\System32\msvcp_win.dll
+0x00007ff9faf20000 - 0x00007ff9fb01a000 	C:\WINDOWS\System32\ucrtbase.dll
+0x00007ff9f1900000 - 0x00007ff9f1b69000 	C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.17134.228_none_fb4599993062b194\COMCTL32.dll
+0x00007ff9fde40000 - 0x00007ff9fe163000 	C:\WINDOWS\System32\combase.dll
+0x00007ff9fabd0000 - 0x00007ff9fac4a000 	C:\WINDOWS\System32\bcryptPrimitives.dll
+0x00007ff9fe640000 - 0x00007ff9fe66d000 	C:\WINDOWS\System32\IMM32.DLL
+0x000000006c720000 - 0x000000006c7f2000 	C:\Program Files\Java\jre1.8.0_181\bin\msvcr100.dll
+0x000000006b280000 - 0x000000006bb22000 	C:\Program Files\Java\jre1.8.0_181\bin\server\jvm.dll
+0x00007ff9fd500000 - 0x00007ff9fd508000 	C:\WINDOWS\System32\PSAPI.DLL
+0x00007ff9ec500000 - 0x00007ff9ec509000 	C:\WINDOWS\SYSTEM32\WSOCK32.dll
+0x00007ff9fdbd0000 - 0x00007ff9fdc3c000 	C:\WINDOWS\System32\WS2_32.dll
+0x00007ff9f3560000 - 0x00007ff9f3583000 	C:\WINDOWS\SYSTEM32\WINMM.dll
+0x00007ff9ed870000 - 0x00007ff9ed87a000 	C:\WINDOWS\SYSTEM32\VERSION.dll
+0x00007ff9f3530000 - 0x00007ff9f355a000 	C:\WINDOWS\SYSTEM32\WINMMBASE.dll
+0x00007ff9fac50000 - 0x00007ff9fac99000 	C:\WINDOWS\System32\cfgmgr32.dll
+0x000000006b270000 - 0x000000006b27f000 	C:\Program Files\Java\jre1.8.0_181\bin\verify.dll
+0x000000006b240000 - 0x000000006b269000 	C:\Program Files\Java\jre1.8.0_181\bin\java.dll
+0x000000006c660000 - 0x000000006c695000 	C:\Program Files\Java\jre1.8.0_181\bin\jdwp.dll
+0x000000006c650000 - 0x000000006c658000 	C:\Program Files\Java\jre1.8.0_181\bin\npt.dll
+0x000000006b220000 - 0x000000006b236000 	C:\Program Files\Java\jre1.8.0_181\bin\zip.dll
+
+VM Arguments:
+jvm_args: -agentlib:jdwp=transport=dt_socket,suspend=y,address=localhost:59790 -Dfile.encoding=Cp1252 
+java_command: br.com.cvc.servidor.Servidor
+java_class_path (initial): D:\desenv-sofea\wk\wkTesteCvc\target\test-classes;D:\desenv-sofea\wk\wkTesteCvc\src\main\webapp\WEB-INF\classes;D:\desenv-sofea\wk\wkTesteCvc\src\main\webapp\WEB-INF\lib\asm-all-repackaged-2.2.0-b21.jar;D:\desenv-sofea\wk\wkTesteCvc\src\main\webapp\WEB-INF\lib\cglib-2.2.0-b21.jar;D:\desenv-sofea\wk\wkTesteCvc\src\main\webapp\WEB-INF\lib\grizzly-framework-2.3.3.jar;D:\desenv-sofea\wk\wkTesteCvc\src\main\webapp\WEB-INF\lib\grizzly-http-2.3.3.jar;D:\desenv-sofea\wk\wkTesteCvc\src\main\webapp\WEB-INF\lib\grizzly-http-server-2.3.3.jar;D:\desenv-sofea\wk\wkTesteCvc\src\main\webapp\WEB-INF\lib\grizzly-rcm-2.3.3.jar;D:\desenv-sofea\wk\wkTesteCvc\src\main\webapp\WEB-INF\lib\gson-2.2.4.jar;D:\desenv-sofea\wk\wkTesteCvc\src\main\webapp\WEB-INF\lib\guava-14.0.1.jar;D:\desenv-sofea\wk\wkTesteCvc\src\main\webapp\WEB-INF\lib\hamcrest-core-1.1.jar;D:\desenv-sofea\wk\wkTesteCvc\src\main\webapp\WEB-INF\lib\hk2-api-2.2.0-b21.jar;D:\desenv-sofea\wk\wkTesteCvc\src\main\webapp\WEB-INF\lib\hk2-locator-2.2.0-b21.jar;D:\desenv-sofea\wk\wkTesteCvc\src\main\webapp\WEB-INF\lib\hk2-utils-2.2.0-b21.jar;D:\desenv-sofea\wk\wkTesteCvc\src\main\webapp\WEB-INF\lib\javax.annotation-api-1.2.jar;D:\desenv-sofea\wk\wkTesteCvc\src\main\webapp\WEB-INF\lib\javax.inject-2.2.0-b21.jar;D:\desenv-sofea\wk\wkTesteCvc\src\main\webapp\WEB-INF\lib\javax.ws.rs-api-2.0.jar;D:\desenv-sofea\wk\wkTesteCvc\src\main\webapp\WEB-INF\lib\jersey-container-grizzly2-http-2.4.1.jar;D:\desenv-sofea\wk\wkTesteCvc\src\main\webapp\WEB-INF\lib\junit-4.9.jar;D:\desenv-sofea\wk\wkTesteCvc\src\main\webapp\WEB-INF\lib\osgi-resource-locator-1.0.1.jar;D:\desenv-sofea\wk\wkTesteCvc\src\main\webapp\WEB-INF\lib\validation-api-1.1.0.Final.jar;D:\desenv-sofea\wk\wkTesteCvc\src\main\webapp\WEB-INF\lib\xmlpull-1.1.3.1.jar;D:\desenv-sofea\wk\wkTesteCvc\src\main\webapp\WEB-INF\lib\xpp3_min-1.1.4c.jar;D:\desenv-sofea\wk\wkTesteCvc\src\main\webapp\WEB-INF\lib\xstream-1.4.6.jar;D:\desenv-sofea\wk\wkTesteCvc\src\main\webapp
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+CLASSPATH=;%JAVA_HOME%\lib;%JAVA_HOME%\lib\tools.jar;%JAVA_HOME%\lib\dt.jar;%JAVA_HOME%\lib\htmlconverter.jar;%JAVA_HOME%\jre\lib;%JAVA_HOME%\jre\lib\rt.jar;
+PATH=C:/Program Files/Java/jre1.8.0_181/bin/server;C:/Program Files/Java/jre1.8.0_181/bin;C:/Program Files/Java/jre1.8.0_181/lib/amd64;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;c:\Program Files (x86)\ATI Technologies\ATI.ACE\Core-Static;%JAVA_HOME%\bin;C:\Program Files (x86)\Griaule\Fingerprint SDK 2009\bin;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;%ME_HOME;C:\Program Files\nodejs\;C:\Program Files\Git\cmd;C:\Users\admin\AppData\Local\Microsoft\WindowsApps;C:\Users\admin\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\admin\AppData\Roaming\npm;;C:\Users\admin\Desktop;
+USERNAME=admin
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 61 Stepping 4, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 10.0 , 64 bit Build 17134 (10.0.17134.1)
+
+CPU:total 4 (initial active 4) (2 cores per cpu, 2 threads per core) family 6 model 61 stepping 4, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, avx2, aes, clmul, erms, 3dnowpref, lzcnt, ht, tsc, tscinvbit, bmi1, bmi2, adx
+
+Memory: 4k page, physical 8301008k(2097208k free), swap 8301008k(5504k free)
+
+vm_info: Java HotSpot(TM) 64-Bit Server VM (25.181-b13) for windows-amd64 JRE (1.8.0_181-b13), built on Jul  7 2018 04:01:33 by "java_re" with MS VC++ 10.0 (VS2010)
+
+time: Fri Sep 07 12:20:10 2018
+elapsed time: 0 seconds (0d 0h 0m 0s)
+
