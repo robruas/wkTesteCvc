@@ -1,9 +1,9 @@
 package br.com.cvc.business;
 
-import java.io.IOException;
-
 import br.com.cvc.broker.WebServeParceiro;
 import br.com.cvc.constantes.Constantes;
+import br.com.cvc.exception.CvcAppBusinessException;
+import br.com.cvc.exception.CvcAppSystemException;
 import br.com.cvc.vo.DadosHospedagemVO;
 
 public class HospedagemHotelBusiness extends HospedagemBusiness {
@@ -17,7 +17,8 @@ public class HospedagemHotelBusiness extends HospedagemBusiness {
 		this.url = str.toString();
 	}
 
-	public String calculaHospedagemPorHotel(final DadosHospedagemVO dadosHospedagemVO) throws IOException {
+	public String calculaHospedagemPorHotel(final DadosHospedagemVO dadosHospedagemVO)
+			throws CvcAppSystemException, CvcAppBusinessException {
 		WebServeParceiro webServeParceiro = new WebServeParceiro(this.url);
 		return this.calcularHospedagem(dadosHospedagemVO, webServeParceiro);
 	}

@@ -33,5 +33,9 @@
 	<classpathentry kind="lib" path="lib/json-simple-1.1.jar"/>
 	<classpathentry kind="lib" path="lib/jackson-jaxrs-json-provider-2.2.3.jar"/>
 	<classpathentry kind="lib" path="lib/jackson-core-2.2.3.jar"/>
+	<classpathentry kind="lib" path="lib/swagger-annotations-1.5.7.jar"/>
+	<classpathentry kind="lib" path="lib/swagger-core-1.5.7.jar"/>
+	<classpathentry kind="lib" path="lib/swagger-jaxrs-1.5.7.jar"/>
+	<classpathentry kind="lib" path="lib/swagger-models-1.5.7.jar"/>
 	<classpathentry kind="output" path="src/main/webapp/WEB-INF/classes"/>
 </classpath>

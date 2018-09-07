@@ -1,12 +1,12 @@
 package br.com.cvc.business;
 
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
 
 import br.com.cvc.broker.WebServeParceiro;
 import br.com.cvc.constantes.Constantes;
+import br.com.cvc.exception.CvcAppSystemException;
 import br.com.cvc.vo.DadosHospedagemVO;
 import br.com.cvc.vo.HotelVO;
 import br.com.cvc.vo.PriceDetailVO;
@@ -16,7 +16,7 @@ import br.com.cvc.vo.RoomsVO;
 
 public class HospedagemBusiness {
 
-	public String calcularHospedagem(final DadosHospedagemVO dadosHospedagemVO, WebServeParceiro webServeParceiro) throws IOException {
+	public String calcularHospedagem(final DadosHospedagemVO dadosHospedagemVO, WebServeParceiro webServeParceiro) throws CvcAppSystemException {
 		List<HotelVO> listaHotelVO = webServeParceiro.obterBrokerParceiro();
 		return this.obterCalculoHospedagem(dadosHospedagemVO, listaHotelVO);
 	}
