@@ -12,7 +12,6 @@ import br.com.cvc.vo.RetornoDadosHospedagemVO;
 import br.com.cvc.vo.RetornoRoomsVO;
 import br.com.cvc.vo.RoomsVO;
 
-
 /**
  * Classe de Calculo de Hospedagem
  * 
@@ -46,7 +45,8 @@ public class HospedagemBusiness {
 				retornoRoomsVO.setCategoryName(roomsVO.getCategoryName());
 				retornoRoomsVO.setRoomID(roomsVO.getRoomID());
 				retornoRoomsVO.setPriceDetail(priceDetail);
-				retornoRoomsVO.setTotalPrice(priceDetail.getPricePerDayAdult() + priceDetail.getPricePerDayChild());
+				retornoRoomsVO.setTotalPrice(Constantes
+						.formataDouble(priceDetail.getPricePerDayAdult() + priceDetail.getPricePerDayChild()));
 
 				listaRetornoRoomsVO.add(retornoRoomsVO);
 				retornoDadosHospedagemVO.setRetornoRoomsVO(listaRetornoRoomsVO);
