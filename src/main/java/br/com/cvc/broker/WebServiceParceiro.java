@@ -15,6 +15,7 @@ import com.google.gson.Gson;
 
 import br.com.cvc.exception.CvcAppBusinessException;
 import br.com.cvc.exception.CvcAppSystemException;
+import br.com.cvc.generic.ObejectGeneric;
 import br.com.cvc.vo.HotelVO;
 
 public class WebServiceParceiro {
@@ -44,11 +45,8 @@ public class WebServiceParceiro {
 				response.append(inputLine);
 			}
 			in.close();
-
-			Gson gson = new Gson();
-			Type type = new TypeToken<List<HotelVO>>() {
-			}.getType();
-			return gson.fromJson(response.toString(), (Type) type);
+			return ObejectGeneric.converteJsonListaObjeto(HotelVO.class, response.toString());
+			
 		} catch (Exception e) {
 			throw new CvcAppSystemException(e.getMessage(), e);
 		}

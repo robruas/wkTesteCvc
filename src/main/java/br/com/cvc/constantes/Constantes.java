@@ -5,6 +5,7 @@ import java.text.DecimalFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 import com.google.common.reflect.TypeToken;
 import com.google.gson.Gson;
@@ -17,9 +18,9 @@ public class Constantes {
 	public static long ZERO = 0l;
 	public static double COMISSAO = 30;
 
-	
 	/**
 	 * Converte String Para Data
+	 * 
 	 * @param StringData
 	 * @return Date
 	 * @throws CvcAppSystemException
@@ -36,6 +37,7 @@ public class Constantes {
 
 	/**
 	 * Converte Objetro para Json
+	 * 
 	 * @param objeto
 	 * @return String
 	 */
@@ -46,6 +48,7 @@ public class Constantes {
 
 	/**
 	 * Formada valor #,###.00
+	 * 
 	 * @param valor
 	 * @return
 	 */
@@ -54,19 +57,4 @@ public class Constantes {
 		return Double.parseDouble(df.format(valor).replaceAll("\\.", "").replace(",", "."));
 	}
 
-	/**
-	 * Converte Json para uma lista de objeto
-	 * @param object
-	 * @param json
-	 * @return
-	 */
-	public static <T> ArrayList<T> converteJsonListaObjeto(Class<T> object, final String json) {
-		Gson gson = new Gson();
-		Type type = new TypeToken<ArrayList<T>>() {
-		}.getType();
-		ArrayList<T> list = new ArrayList<>();
-		list = gson.fromJson(json.toString(), (Type) type);
-		return list;
-
-	}
 }
